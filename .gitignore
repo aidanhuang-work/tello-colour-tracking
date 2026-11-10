@@ -1,5 +1,3 @@
 *
 !.gitignore
-!lab.py
-!trackbars.py
-!README.md
+!test_flight.py
