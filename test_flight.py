@@ -7,6 +7,7 @@ import numpy as np
 
 def main():
     choice = input('Testing with laptop or tello feed? (1 | 2): ')
+
     if choice == '1':
         cap = cv.VideoCapture(0)
         cap.set(3,400)
@@ -14,7 +15,7 @@ def main():
         cap.set(10,100)
 
         while True:
-            ret, frame = cap.read() # NP array frame = the tello's frame attribute
+            ret, frame = cap.read() 
             frame_hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
             #cv.imshow('Webcam', frame_hsv)
         
@@ -36,7 +37,6 @@ def main():
                 else:
                     cv.putText(result, 'middle', (150,200), cv.FONT_HERSHEY_COMPLEX, 2, (255,255,255), 3)
             else:
-                #d.send_rc_control(0,0,0,0)
                 cv.putText(result, 'no item seen', (150,200), cv.FONT_HERSHEY_COMPLEX, 2, (255,255,255), 3)
             
             cv.imshow('final result', result)

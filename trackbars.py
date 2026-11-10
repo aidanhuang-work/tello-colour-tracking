@@ -79,8 +79,8 @@ def laptop():
     cv.namedWindow(final_window)
     cv.namedWindow('mask')
 
-    cv.resizeWindow(final_window, (1280,720))
-    cv.resizeWindow('mask', (1280,720))
+    cv.resizeWindow(final_window, (400,300)) # Tello size
+    cv.resizeWindow('mask', (400,300))
 
     cv.setMouseCallback(final_window, position)
     while True:
